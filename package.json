@@ -1,0 +1,46 @@
+{
+  "name": "sails-hook-rewire",
+  "description": "Installable sailsjs hook that lets you rewire sails components during tests",
+  "author": "Postman Labs <help@getpostman.com>",
+  "contributors": [
+    "Akshay Bist <akshay@getpostman.com>"
+  ],
+  "license": "Apache-2.0",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/postmanlabs/sails-hook-rewire.git"
+  },
+  "bugs": {
+    "url": "https://github.com/postmanlabs/sails-hook-rewire/issues"
+  },
+  "main": "index.js",
+  "keywords": [
+    "sails",
+    "rewire"
+  ],
+  "scripts": {
+    "test": "scripts/test/test.sh",
+    "check": "scripts/check/check.sh",
+    "check-infra": "scripts/check/check-infra.sh",
+    "lint": "scripts/lint/lint.sh"
+  },
+  "dependencies": {
+    "async": "1.5.0",
+    "rewire": "2.5.1",
+    "sails-util": "0.10.6"
+  },
+  "devDependencies": {
+    "expect.js": "0.3.1",
+    "istanbul": "0.4.1",
+    "js-beautify": "1.5.10",
+    "jscs": "2.7.0",
+    "jshint": "2.8.0",
+    "mocha": "2.3.4",
+    "sails": "0.11.3",
+    "supertest": "1.1.0"
+  },
+  "sails": {
+    "isHook": true
+  }
+}
