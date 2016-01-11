@@ -3,7 +3,7 @@
 var path = require('path'),
   skeletonAppPath = path.join(__dirname, 'app-skeleton'),
   Sails = require('sails'),
-  responders = require('../../index.js'),
+  rewire = require('../../index.js'),
   sails;
 
 before(function (done) {
@@ -26,7 +26,6 @@ before(function (done) {
     }
   },
   function (err, server) {
-    console.log(server);
     if (err) { return done(err); }
     sails = server;
     return done(null, sails);

@@ -4,8 +4,7 @@
   // "disallowCommaBeforeLineBreak": false,
   "disallowDanglingUnderscores": {
     "allExcept": [
-      "_sails",
-      "__configKey__"
+      "__set__"
     ]
   },
   "disallowEmptyBlocks": true,

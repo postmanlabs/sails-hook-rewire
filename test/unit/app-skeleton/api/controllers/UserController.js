@@ -1,7 +1,7 @@
 /**
- * TestController
+ * UserController
  *
- * @description :: Controller to test jsoners
+ * @description :: Controller to test sails-hook-rewire
  */
 
 var baseUser = {
