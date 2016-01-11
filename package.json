@@ -7,7 +7,7 @@
     "Shamasis Bhattacharya <shamasis@getpostman.com>"
   ],
   "license": "Apache-2.0",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/postmanlabs/sails-hook-rewire.git"
@@ -18,7 +18,10 @@
   "main": "index.js",
   "keywords": [
     "sails",
-    "rewire"
+    "sails hook",
+    "rewire",
+    "testing",
+    "stubbing"
   ],
   "scripts": {
     "test": "scripts/test/test.sh",
