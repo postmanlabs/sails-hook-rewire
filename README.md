@@ -169,7 +169,9 @@ Optionally, if you wish to lift your server in test mode, you can pass the envir
 sails lift --environment=test
 ```
 
-For more examples of how to test sails components with rewire, check out the tests for this module.
+For more examples of how to test sails components with rewire, check out the
+[tests](https://github.com/postmanlabs/sails-hook-rewire/tree/master/test/unit) for this module.
+
 ---
 This project is licensed under the [Apache 2.0](LICENSE.md) License.
 
