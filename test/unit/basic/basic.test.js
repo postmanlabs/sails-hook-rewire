@@ -10,7 +10,7 @@ describe('Basic hook test', function () {
     expect(sails.hooks.rewire).to.be.ok();
   });
 
-  describe('modules have been reqired as expected', function () {
+  describe('modules have been rewired as expected', function () {
     it('File controller has been rewired', function () {
       expect(sails.controllers.file.hasOwnProperty('__set__')).to.be.ok();
     });
@@ -24,20 +24,20 @@ describe('Basic hook test', function () {
       expect(sails.controllers.user.hasOwnProperty('__set__')).to.not.be.ok();
     });
 
-    it('Fetch service has been rewired, and is in global', function () {
-      expect(sails.services.fetchservice.hasOwnProperty('__set__')).to.be.ok();
-      expect(global.hasOwnProperty('FetchService')).to.be.ok();
-      expect(FetchService.hasOwnProperty('__set__')).to.be.ok();
+    it('File service has been rewired, and is in global', function () {
+      expect(sails.services.fileservice.hasOwnProperty('__set__')).to.be.ok();
+      expect(global.hasOwnProperty('FileService')).to.be.ok();
+      expect(FileService.hasOwnProperty('__set__')).to.be.ok();
     });
 
     it('Request service has not been rewired', function () {
       expect(sails.services.requestservice.hasOwnProperty('__set__')).to.not.be.ok();
     });
 
-    it('File service has been rewired, but not the global object', function () {
-      expect(sails.services.fileservice.hasOwnProperty('__set__')).to.be.ok();
-      expect(global.hasOwnProperty('FileService')).to.be.ok();
-      expect(FileService.hasOwnProperty('__set__')).to.not.be.ok();
+    it('Fetch service has been rewired, but not the global object', function () {
+      expect(sails.services.fetchservice.hasOwnProperty('__set__')).to.be.ok();
+      expect(global.hasOwnProperty('FetchService')).to.be.ok();
+      expect(FetchService.hasOwnProperty('__set__')).to.not.be.ok();
     });
   });
 });
