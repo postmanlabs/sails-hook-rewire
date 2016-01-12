@@ -11,12 +11,12 @@ module.exports.rewire = {
   // List services to be rewired
   services: [
     {
-      name: 'FetchService',
-      global: true    // replace the global FetchService with the rewired version
+      name: 'FileService',
+      global: true    // replace the global FileService with the rewired version
     },
     {
-      name: 'FileService',
-      global: false   // don't replace the global FileService with the rewired version
+      name: 'FetchService',
+      global: false   // don't replace the global FetchService with the rewired version
     }
   ],
   // List controllers to be rewired

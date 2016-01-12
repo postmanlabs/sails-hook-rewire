@@ -7,7 +7,7 @@
 var fs = require('fs');
 
 module.exports = {
-  sendFile: function (req, res) {
+  sendFileStats: function (req, res) {
     fs.stat(req.body.path, function (err, stats) {
       if (err) {
         return res.json(500, {
