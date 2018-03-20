@@ -17,8 +17,8 @@ module.exports = function (sails) {
         // Make the callback optional
         cb = util.optional(cb);
 
-        // Only rewire stuff if sails is loaded/lifted in test environment
-        if (sails.config.environment !== 'test') {
+        // Only rewire stuff if sails is loaded/lifted in test environment or in the configured one
+        if (sails.config.environment !== (sails.config.rewire.environment || 'test')) {
           sails.log.verbose('Not rewiring as app is not running in test environment');
           return cb();
         }

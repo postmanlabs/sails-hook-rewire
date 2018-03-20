@@ -169,6 +169,18 @@ Optionally, if you wish to lift your server in test mode, you can pass the envir
 sails lift --environment=test
 ```
 
+####### Changing name of environment
+
+If you run your tests with another environment variable name, you can specity it in the configuration:
+
+```javascript
+module.exports.rewire = {
+  environment: 'shippable'
+};
+```
+
+
+
 For more examples of how to test sails components with rewire, check out the
 [tests](https://github.com/postmanlabs/sails-hook-rewire/tree/master/test/unit) for this module.
 
