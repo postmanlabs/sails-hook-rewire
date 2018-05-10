@@ -175,8 +175,11 @@ If you run your tests with another environment variable name, you can specity it
 
 ```javascript
 module.exports.rewire = {
-  environment: 'shippable'
-};
+  environments: {
+    test: true,  // should default to true
+    shippable: true,
+    development: false
+  }
 ```
 
 
