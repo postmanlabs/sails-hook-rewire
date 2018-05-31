@@ -1,3 +1,4 @@
+// jscs:disable disallowDanglingUnderscores
 module.exports = function (sails) {
   var path = require('path'),
     rewire = require('rewire'),
@@ -10,16 +11,27 @@ module.exports = function (sails) {
      */
     rewirePolicyHookDef = {
       /**
+       * Sets rewire defaults
+       */
+      defaults: {
+        __configKey__: {
+          environments: {
+            test: true
+          }
+        }
+      },
+      /**
        * Initialize the hook.
        * Called when sails loads
        */
       initialize: function (cb) {
         // Make the callback optional
         cb = util.optional(cb);
-
-        // Only rewire stuff if sails is loaded/lifted in test environment
-        if (sails.config.environment !== 'test') {
-          sails.log.verbose('Not rewiring as app is not running in test environment');
+        sails.log.info('Rewiring components for testing');
+        var hookConfig = sails.config[this.configKey],
+          env = sails.config.environment;
+        if (hookConfig.environments && hookConfig.environments[env] !== true) {
+          sails.log.verbose('Not rewiring as app is not running in an enabled environment');
           return cb();
         }
 
@@ -33,9 +45,8 @@ module.exports = function (sails) {
        * Load all modules listed to be rewired in config, via rewire, and replace them in sails.
        */
       rewire: function () {
-        var config = sails.config.rewire;
-
-        util.each(config, function (moduleConfig, moduleName) {
+        var hookConfig = sails.config[this.configKey];
+        util.each(hookConfig, function (moduleConfig, moduleName) {
           if (!sails.hasOwnProperty(moduleName)) {
             sails.log.verbose(moduleName, ' not a part of sails, skipping');
             return;
