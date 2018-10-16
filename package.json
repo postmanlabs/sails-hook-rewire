@@ -38,11 +38,11 @@
     "expect.js": "0.3.1",
     "istanbul": "0.4.1",
     "js-beautify": "1.5.10",
-    "jscs": "2.7.0",
-    "jshint": "2.8.0",
-    "mocha": "2.3.4",
-    "sails": "0.11.3",
-    "supertest": "1.1.0"
+    "jscs": "2.8.0",
+    "jshint": "2.9.3",
+    "mocha": "3.3.0",
+    "sails": "1.0.0",
+    "supertest": "3.0.0"
   },
   "sails": {
     "isHook": true
