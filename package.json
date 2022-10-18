@@ -36,12 +36,12 @@
   },
   "devDependencies": {
     "expect.js": "0.3.1",
-    "istanbul": "0.4.1",
+    "istanbul": "0.4.5",
     "js-beautify": "1.5.10",
-    "jscs": "2.7.0",
-    "jshint": "2.8.0",
-    "mocha": "2.3.4",
-    "sails": "0.11.3",
+    "jscs": "2.8.0",
+    "jshint": "2.9.3",
+    "mocha": "3.0.0",
+    "sails": "0.12.4",
     "supertest": "1.1.0"
   },
   "sails": {
